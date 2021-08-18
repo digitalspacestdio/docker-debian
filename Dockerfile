@@ -1,4 +1,4 @@
-FROM debian:buster
+FROM ruby:2.6-buster
 LABEL maintainer="Sergey Cherepanov <sergey@digitalspace.studio>"
 LABEL name="digitalspacestudio/debian"
 ARG DEBIAN_FRONTEND=noninteractive
