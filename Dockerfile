@@ -1,6 +1,6 @@
-FROM ruby:2.6-buster
+FROM ruby:2.6.9-slim-bullseye
 LABEL maintainer="Sergey Cherepanov <sergey@digitalspace.studio>"
-LABEL name="digitalspacestudio/debian"
+LABEL name="digitalspacestudio/ruby:2.6.9-slim-bullseye"
 ARG DEBIAN_FRONTEND=noninteractive
 ENV LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8 LANGUAGE=en_US.UTF-8
 COPY 01_nodoc /etc/dpkg/dpkg.conf.d/01_nodoc
