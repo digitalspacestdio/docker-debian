@@ -1,6 +1,6 @@
 FROM gcc:11-bullseye AS buildpack
 LABEL maintainer="Sergey Cherepanov <sergey@digitalspace.studio>"
-LABEL name="digitalspacestudio/debian:gcc-11-ruby-2.6-bullseye"
+LABEL name="digitalspacestudio/debian:gcc-11-ruby-3.1-bullseye"
 ARG DEBIAN_FRONTEND=noninteractive
 ENV LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8 LANGUAGE=en_US.UTF-8
 COPY 01_nodoc /etc/dpkg/dpkg.conf.d/01_nodoc
@@ -37,9 +37,9 @@ RUN set -eux; \
         echo 'update: --no-document'; \
     } >> /usr/local/etc/gemrc
 
-ENV RUBY_MAJOR 2.6
-ENV RUBY_VERSION 2.6.9
-ENV RUBY_DOWNLOAD_SHA256 6a041d82ae6e0f02ccb1465e620d94a7196489d8a13d6018a160da42ebc1eece
+ENV RUBY_MAJOR 3.1
+ENV RUBY_VERSION 3.1.4
+ENV RUBY_DOWNLOAD_SHA256 1b6d6010e76036c937b9671f4752f065aeca800a6c664f71f6c9a699453af94f
 
 # some of ruby's build scripts are written in ruby
 #   we purge system ruby later to make sure our final image uses what we just built
